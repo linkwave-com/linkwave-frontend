@@ -10,7 +10,7 @@ const milestones = [
         'Remove setup friction: plug-and-play tools',
         'Focus on stability, speed, and real use cases'
       ],
-      index: 0
+      index: 0.05
     },
     {
       label: 'Growth',
@@ -82,7 +82,7 @@ export default function Roadmap() {
         {points.map((p, i) => (
           <g key={i} className="milestone" onClick={() => setActivePoint(p)}>
             <circle cx={p.x} cy={p.y} r="12" className="milestone-dot" />
-            <text x={p.x} y={p.y - 20} className="milestone-label">{p.label}</text>
+            <text x={p.x} y={p.y - 40} className="milestone-label">{p.label}</text>
           </g>
         ))}
       </svg>

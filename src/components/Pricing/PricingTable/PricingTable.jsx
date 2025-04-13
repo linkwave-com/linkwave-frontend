@@ -43,19 +43,28 @@ const pricingPlans = [
 export default function PricingTable({ highlightPlan }) {
   const [highlighted, setHighlighted] = useState(null);
   const tableRef = useRef();
+  const rowRefs = useRef({});
 
   useEffect(() => {
     if (highlightPlan) {
       setHighlighted(highlightPlan);
-  
-      if (tableRef.current) {
-        const offsetTop = tableRef.current.getBoundingClientRect().top + window.scrollY;
+
+      const isMobile = window.innerWidth < 768;
+
+      const scrollTarget = isMobile
+        ? rowRefs.current[highlightPlan]
+        : tableRef.current;
+
+      if (scrollTarget) {
+        const offsetTop = scrollTarget.getBoundingClientRect().top + window.scrollY;
+        const adjustedTop = offsetTop - 100;
+
         window.scrollTo({
-          top: offsetTop - 100,
-          behavior: 'smooth'
+          top: adjustedTop,
+          behavior: 'smooth',
         });
       }
-  
+
       const timer = setTimeout(() => setHighlighted(null), 2000);
       return () => clearTimeout(timer);
     }
@@ -78,6 +87,7 @@ export default function PricingTable({ highlightPlan }) {
           {pricingPlans.map((plan, i) => (
             <tr
               key={i}
+              ref={(el) => (rowRefs.current[plan.name] = el)}
               className={highlighted === plan.name ? 'highlight-glow' : ''}
             >
               <td className="plan-name">
