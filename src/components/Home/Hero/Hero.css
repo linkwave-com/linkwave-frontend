@@ -1,0 +1,104 @@
+.hero {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    padding: 40px 20px 0;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-out;
+    margin: 20px;
+  }
+  
+  .hero-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+    animation: slideInTop 1.2s ease-out;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .logo {
+    max-width: 220px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.3));
+  }
+  
+  .hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #cbd5e1;
+  }
+  
+  .cta {
+    background-color: #0f172a;
+    color: #00ffd0;
+    padding: 12px 28px;
+    border: 2px solid #00ffd0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: 0.3s ease;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .cta:hover {
+    background-color: #00ffd0;
+    color: #0f172a;
+  }
+  
+  .wave-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    line-height: 0;
+    z-index: 1;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .wave-bottom svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    animation: none;
+  }
+  
+  .wave-bottom.animate svg {
+    animation: waveFlow 2s ease-out;
+  }
+
+  .logo-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  @keyframes waveFlow {
+    0% { transform: translateY(0) scaleY(1) skewX(0deg); }
+    30% { transform: translateY(2px) scaleY(1.02) skewX(-2deg); }
+    60% { transform: translateY(0px) scaleY(1.05) skewX(2deg); }
+    100% { transform: translateY(0) scaleY(1) skewX(0deg); }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideInTop {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  

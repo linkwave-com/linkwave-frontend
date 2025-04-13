@@ -1,0 +1,70 @@
+.roadmap-container {
+    text-align: center;
+    padding: 0 20px;
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .wave-svg {
+    max-width: 100%;
+  }
+  
+  .milestone-dot {
+    fill: #0ea5e9;
+    stroke: #38bdf8;
+    stroke-width: 2;
+    cursor: pointer;
+    transition: r 0.2s ease;
+  }
+  
+  .milestone-dot:hover {
+    r: 10;
+  }
+  
+  .milestone-label {
+    fill: #ffffff;
+    font-size: 1rem;
+    text-anchor: middle;
+    pointer-events: none;
+  }
+  
+  .milestone-details {
+    padding: 30px;
+    background: #1c1f2b;
+    border-radius: 16px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    text-align: left;
+    animation: fadeInUp 0.4s ease;
+  }
+  
+  .milestone-details h3 {
+    margin-bottom: 16px;
+    font-size: 1.3rem;
+    color: #38bdf8;
+  }
+  
+  .milestone-details ul {
+    padding-left: 20px;
+    margin: 0;
+  }
+  
+  .milestone-details li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
