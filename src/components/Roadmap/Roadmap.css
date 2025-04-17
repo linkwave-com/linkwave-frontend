@@ -67,4 +67,14 @@
       transform: translateY(0);
     }
   }
+
+  @media (max-width: 768px) {
+    .milestone-dot {
+      stroke-width: 35;
+    }
+
+    .milestone-label{
+      font-size: 2rem;
+    }
+  }
   
