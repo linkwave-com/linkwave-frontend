@@ -29,6 +29,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-logos">
+          <h4>Member of</h4>
           <img src={ColosseumLogo} alt="Colosseum Hackathon" />
         </div>
       </div>

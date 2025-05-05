@@ -10,33 +10,34 @@ const pricingPlans = [
       'Basic subscription link',
       'QR code support',
       'Solana payments',
-      'Up to 100 active subscribers',
+      'Up to 3k$ monthly turnover',
     ],
     fee: '1.5%',
   },
   {
     name: 'Pro',
-    price: '$99/month',
+    price: '$199/month',
     audience: 'Growing startups & SaaS teams',
     features: [
       'Everything in Starter',
       'Dashboard & analytics',
       'API access',
-      'Up to 1500 active subscribers',
+      '50k$ monthly turnover',
     ],
-    fee: '1.2%',
+    fee: '0.8%',
   },
   {
     name: 'Enterprise',
-    price: '$299/month',
+    price: 'Custom',
     audience: 'Scale-ups & large platforms',
     features: [
       'Everything in Pro',
-      'Custom branding & onboarding',
+      'Individual branding & onboarding',
       'Priority support, SLA',
       'Unlimited subscribers',
+      'Custom features'
     ],
-    fee: '0.9%',
+    fee: 'Custom',
   },
 ];
 
